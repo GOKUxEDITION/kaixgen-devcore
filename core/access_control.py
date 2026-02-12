@@ -1,7 +1,19 @@
+from datetime import datetime
+from database.connection import SessionLocal
+from database.models import User
+
+
 class AccessControl:
-    def __init__(self):
-        # Example allowed users
-        self.allowed_users = [123456]
 
     def validate_user(self, user_id: int) -> bool:
-        return user_id in self.allowed_users
+        db = SessionLocal()
+        user = db.query(User).filter(User.telegram_id == user_id).first()
+        db.close()
+
+        if not user:
+            return False
+
+        if not user.subscription_expiry:
+            return False
+
+        return user.subscription_expiry > datetime.utcnow()
