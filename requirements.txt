@@ -4,3 +4,5 @@ python-dotenv
 telethon
 psycopg2-binary
 redis
+sqlalchemy
+asyncpg
