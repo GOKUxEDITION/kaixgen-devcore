@@ -1,7 +1,6 @@
 # kaixgen-devcore
 # ⚡ KAIxGen DevCore  Enterprise AI Infrastructure for Telegram &amp; Digital Businesses.  Automation • Monetization • Intelligence
 # ⚡ KAIxGen DevCore
-# ⚡ KAIxGen DevCore
 
 Enterprise AI Infrastructure for Telegram & Digital Businesses.
 
